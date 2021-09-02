@@ -5,14 +5,14 @@ EAPI=7
 CROS_WORKON_PROJECT="flatcar-linux/ignition"
 CROS_WORKON_LOCALNAME="ignition"
 CROS_WORKON_REPO="git://github.com"
-COREOS_GO_PACKAGE="github.com/coreos/ignition"
+COREOS_GO_PACKAGE="github.com/coreos/ignition/v2"
 COREOS_GO_GO111MODULE="off"
 inherit coreos-go cros-workon systemd udev
 
 if [[ "${PV}" == 9999 ]]; then
 	KEYWORDS="~amd64 ~arm64"
 else
-	CROS_WORKON_COMMIT="a070efe79edba7541b33ffd80e82dffe557ebf74" # flatcar-master
+	CROS_WORKON_COMMIT="c8eaac32b7f559603fe714a09bf24e28a44a5dac" # tormath1/convert-v2-v3
 	KEYWORDS="amd64 arm64"
 fi
 
@@ -46,7 +46,7 @@ PATCHES=(
 
 src_compile() {
 	export GO15VENDOREXPERIMENT="1"
-	GO_LDFLAGS="-X github.com/coreos/ignition/internal/version.Raw=$(git describe --dirty)" || die
+	GO_LDFLAGS="-X github.com/coreos/ignition/v2/internal/version.Raw=${PV} -X github.com/coreos/ignition/v2/internal/distro.selinuxRelabel=false -X github.com/coreos/ignition/v2/internal/distro.writeAuthorizedKeysFragment=false" || die
 	go_build "${COREOS_GO_PACKAGE}/internal"
 }
 
