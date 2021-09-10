@@ -28,7 +28,6 @@ app-misc/editor-wrapper *
 =dev-perl/Text-Unidecode-1.270.0 ~arm64
 =dev-python/ctypesgen-0_p72-r1 *
 =dev-python/flake8-2.5.4 ~arm64
-=dev-python/isort-4.2.5 *
 =dev-python/lazy-object-proxy-1.2.1 *
 =dev-python/mako-1.0.3 ~arm64
 =dev-python/mccabe-0.2.1 *
