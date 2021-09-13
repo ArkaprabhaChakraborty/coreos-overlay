@@ -28,7 +28,6 @@ app-misc/editor-wrapper *
 =dev-perl/Text-Unidecode-1.270.0 ~arm64
 dev-util/checkbashisms *
 =dev-util/meson-0.43.0 ~arm64
-=dev-util/ninja-1.8.2 ~arm64
 =dev-util/re2c-0.16 ~arm64
 dev-util/patchelf *
 =net-analyzer/nmap-7.40 ~arm64
