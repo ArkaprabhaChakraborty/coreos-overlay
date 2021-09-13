@@ -2,7 +2,7 @@
 # Copyright (c) 2013 The CoreOS Authors. All rights reserved.
 # Distributed under the terms of the GNU General Public License v2
 
-=dev-util/perf-4.9.13 ~amd64
+=dev-util/perf-5.9.9 ~amd64 ~arm64
 
 # Everything needed for the boot engine
 >=sys-apps/kexec-tools-2.0.4-r1 ~amd64
