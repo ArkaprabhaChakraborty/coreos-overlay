@@ -106,3 +106,8 @@ dev-util/checkbashisms
 # already stabilised for both amd64 and arm64) until we move off from
 # python3.6.
 =sys-libs/talloc-2.3.2 ~amd64 ~arm64
+
+# Pull in 5.0.1 version of dev-python/setuptools_scm. We need this
+# line until we move off from python 3.6. This is to hopefully unbreak
+# the setuptools_scm and other python builds.
+=dev-python/setuptools_scm-5.0.1 ~amd64 ~arm64
