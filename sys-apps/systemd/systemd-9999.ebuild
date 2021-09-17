@@ -500,14 +500,14 @@ multilib_src_install_all() {
 
 builddir_systemd_enable_service() {
     (
-        export SYSROOT="${ED}"
+        #export SYSROOT="${ED}"
         systemd_enable_service "$@"
     )
 }
 
 builddir_systemd_get_systemunitdir() {
     (
-        export SYSROOT="${ED}"
+        #export SYSROOT="${ED}"
         systemd_get_systemunitdir
     )
 }
