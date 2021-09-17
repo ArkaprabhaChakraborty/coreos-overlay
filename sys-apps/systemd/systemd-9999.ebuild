@@ -443,6 +443,7 @@ multilib_src_install_all() {
 
 	# Flatcar: Don't default to graphical.target.
 	local unitdir=$(builddir_systemd_get_systemunitdir)
+	ewarn "Doing 'dosym multi-user.target ${unitdir}/default.target'"
 	dosym multi-user.target "${unitdir}"/default.target
 
 	# Flatcar: Don't set any extra environment variables by default.
@@ -512,6 +513,7 @@ builddir_systemd_enable_service() {
 	local ud=$(builddir_systemd_get_systemunitdir)
 	local destname=${service##*/}
 
+	ewarn "'dodir ${ud}/${target}.wants' and 'dosym ../${service} ${ud}/${target}.wants/${destname}'"
 	dodir "${ud}"/"${target}".wants && \
 	dosym ../"${service}" "${ud}"/"${target}".wants/"${destname}"
 }
