@@ -18,6 +18,10 @@ RDEPEND="!<${CATEGORY}/${GNOME_ORG_MODULE}-${PV}"
 # Use !<${PV} because mixing gobject-introspection with different version of -common can cause issues like:
 # https://forums.gentoo.org/viewtopic-p-7421930.html
 
+PATCHES=(
+    "${FILESDIR}/drop-pkg-config-sysroot-dir.patch"
+)
+
 src_configure() { :; }
 
 src_compile() { :; }
