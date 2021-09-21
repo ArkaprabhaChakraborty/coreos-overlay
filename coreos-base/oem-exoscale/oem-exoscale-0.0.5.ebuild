@@ -5,7 +5,7 @@
 # $Header:$
 #
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="OEM suite for Exoscale images"
 HOMEPAGE=""

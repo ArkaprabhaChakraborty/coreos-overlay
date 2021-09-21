@@ -5,7 +5,7 @@
 # $Header:$
 #
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="oem suite for rackspace images"
 HOMEPAGE=""
