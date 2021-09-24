@@ -110,3 +110,6 @@ dev-util/checkbashisms
 # already stabilised for both amd64 and arm64) until we move off from
 # python3.6.
 =sys-libs/talloc-2.3.2 ~amd64 ~arm64
+
+# dev-libs/openssl-3.0.0 is still in testing phase at this point
+=dev-libs/openssl-3.0.0 ~amd64 ~arm64
