@@ -32,8 +32,8 @@ src_unpack() {
 src_compile() {
 	emake \
 		CROSS_COMPILE="${CHOST}-" \
-		EFI_INCLUDE="${ROOT}"usr/include/efi \
-		EFI_PATH="${ROOT}"usr/$(get_libdir) \
+		EFI_INCLUDE="${SYSROOT%/}"/usr/include/efi \
+		EFI_PATH="${SYSROOT%/}"/usr/$(get_libdir) \
 		shim.efi || die
 }
 
