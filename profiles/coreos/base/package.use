@@ -144,3 +144,8 @@ net-firewall/iptables nftables
 
 # Install `perl` with a minimal set of dependencies
 dev-lang/perl minimal
+
+# `bindist` pulls patches from https://dev.gentoo.org/~whissi/dist/openssl/
+# and there is no patches for opensslv3 at the moment.
+# https://marc.info/?l=gentoo-dev&m=163216172229772&w=2
+net-misc/openssh -bindist
