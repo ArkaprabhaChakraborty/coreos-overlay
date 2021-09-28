@@ -42,6 +42,10 @@ DEPEND="dev-cpp/gtest
 	${BDEPEND}
 	${RDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/disable-werror.patch"
+)
+
 src_configure() {
 	# Disable PIE when building for the SDK, this works around a bug that
 	# breaks using delta_generator from the update.zip bundle.
